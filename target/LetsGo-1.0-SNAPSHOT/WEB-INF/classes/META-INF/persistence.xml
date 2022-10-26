@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.at_LetsGo_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.at.pojo.Chuyenxe</class>
+    <class>com.at.pojo.ChuyennxeChongoi</class>
+    <class>com.at.pojo.Nhanvien</class>
+    <class>com.at.pojo.Khachhang</class>
+    <class>com.at.pojo.User</class>
+    <class>com.at.pojo.Loainv</class>
+    <class>com.at.pojo.Chitiethoadon</class>
+    <class>com.at.pojo.TuyenxeDiadiem</class>
+    <class>com.at.pojo.Huyve</class>
+    <class>com.at.pojo.Diadiem</class>
+    <class>com.at.pojo.Loaixe</class>
+    <class>com.at.pojo.Xe</class>
+    <class>com.at.pojo.Tuyenxe</class>
+    <class>com.at.pojo.Taixe</class>
+    <class>com.at.configs.TuyenxeDiadiem</class>
+    <class>com.at.configs.Tuyenxe</class>
+    <class>com.at.configs.Huyve</class>
+    <class>com.at.configs.Loaixe</class>
+    <class>com.at.configs.Loainv</class>
+    <class>com.at.configs.Khachhang</class>
+    <class>com.at.configs.Chitiethoadon</class>
+    <class>com.at.configs.Taixe</class>
+    <class>com.at.configs.Hoadon</class>
+    <class>com.at.configs.Xe</class>
+    <class>com.at.configs.ChuyennxeChongoi</class>
+    <class>com.at.configs.Nhanvien</class>
+    <class>com.at.configs.User</class>
+    <class>com.at.configs.Chuyenxe</class>
+    <class>com.at.configs.Diadiem</class>
+    <class>com.at.pojo.Comment</class>
+    <class>com.at.pojo.Chinhsachhuyve</class>
+    <class>com.at.pojo.Nhanvien_1</class>
+    <class>com.at.pojo.Tuyenxe_1</class>
+    <class>com.at.pojo.Loaixe_1</class>
+    <class>com.at.pojo.User_1</class>
+    <class>com.at.pojo.Loainv_1</class>
+    <class>com.at.pojo.Chuyenxe_1</class>
+    <class>com.at.pojo.Xe_1</class>
+    <class>com.at.pojo.Khachhang_1</class>
+    <class>com.at.pojo.Hoadon</class>
+    <class>com.at.pojo.Taixe_1</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/xekhach?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="anhthu123"/>
+    </properties>
+  </persistence-unit>
+</persistence>

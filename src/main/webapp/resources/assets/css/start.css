@@ -1,0 +1,133 @@
+/*dang nhap*/
+
+/*thanh tra cuu vé*/
+
+.container-fluid div.tra_cuu h2 {
+  margin-top: 15px;
+}
+
+.wraper{
+    max-width: 1200px;
+    width: 1000%;
+/*    margin: auto;*/
+margin-left: 125px;
+margin-top: -100px;
+    position: relative;
+}
+.search-contend-items{
+    margin: -40px 40px 50px 40px;
+    justify-content: space-between;
+    background-color: rgba(221, 221, 221 , 0.5);
+    padding: 12px;
+    border-radius: 5px;
+}
+.search-contend-item{
+    height: 50px;
+    background-color: #FFF;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+}
+.search-contend-item input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 36px;
+    border-radius: 5px;
+}
+.search-contend-item i{
+    position: absolute;
+    color: #FFC800;
+    margin-right:12px;
+    left: 12px;
+    z-index: 1;
+}
+.search-contend-item:last-child{
+    width: 100px;
+} 
+.search-contend-item:last-child a{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background-color: #FFC800;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.search-contend-item:last-child a:hover{
+    background-color: #FFDD66;
+}
+.autobox{
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    width: 100%;
+    background-color: rgba (221, 221, 221 , 0.5);
+    overflow-y: auto;
+}
+.autobox li {
+    list-style: none;
+    padding: 6px 0px 6px 36px;
+    cursor: pointer;
+    display: none;
+}
+.autobox li:hover{
+    color: #FFDD66;
+    
+}
+/*Dang ki*/
+/*#register {
+    float: right;
+    width: 30%;
+    margin-right:300px;
+    margin-bottom: 15px;
+}
+#registerleft {
+    float: left;
+    width: 30%;
+    margin-left: 300px;
+    margin-bottom: 15px;
+}*/
+/*Tra cuu ve*/
+.container-fluid div.check-ticket-input-group {
+  margin-left:  150px ;
+  font-weight: 300;
+}
+@media (min-width: 1024px) {
+  .container-fluid div.check-ticket-input-group {
+    width: 40%;
+  }
+
+
+/*thong tin nha xe*/
+.container-fluid {
+  text-align: left;
+ 
+}
+
+.container-fluid h2 {
+  margin: 200px 0 10px 150px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #5f5950;
+}
+
+.container-fluid h2 span {
+  color: #ffb03b;
+}
+
+.container-fluid p {
+  margin-left:  150px ;
+  font-weight: 300;
+}
+.container-fluid span.bold {   
+   font-weight: bold;
+}
+@media (min-width: 1024px) {
+  .container-fluid p {
+    width: 50%;
+  }
