@@ -11,8 +11,6 @@ import com.at.service.UserService;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
-import static jdk.internal.org.jline.utils.Colors.h;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;

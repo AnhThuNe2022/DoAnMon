@@ -251,7 +251,8 @@ public class ChuyenXeRepositoryImpl implements ChuyenXeRepository {
         Date tomorrow = new Date(today.getTime() + (1000 * 60 * 60 * 24));
         Predicate p1 = b.like(rootTX.get("maTuyenXe").as(String.class), maTX);
         Predicate p3 = b.lessThan(rootCX.get("gioXuatPhat"),tomorrow );
-        Predicate p4 = b.greaterThanOrEqualTo(rootCX.get("gioXuatPhat"), today);
+        Predicate p4 =b.and( b.greaterThanOrEqualTo(rootCX.get("gioXuatPhat"), today),
+                b.greaterThanOrEqualTo(rootCX.get("gioXuatPhat"), new Date()));
    
 
         q = q.where(b.and(p1,p2,p4,p3));

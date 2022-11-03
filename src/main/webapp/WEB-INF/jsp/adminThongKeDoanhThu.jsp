@@ -73,6 +73,8 @@
                                     <th>Quý</th>
                                     </c:if>
                                 <th>Doanh Thu</th>
+                                <th>Hủy Vé</th>
+                                <th>Doanh Thu Thực</th>
 
                             </tr>
                         </thead>
@@ -81,7 +83,11 @@
                             <tbody>
                                 <tr>
                                     <td>${p.key}</td>
-                                    <td><fmt:formatNumber value ="${p.value}" maxFractionDigits="3" type ="number"/> </td>
+                                    
+                                    <td><fmt:formatNumber value ="${p.value[0]}" maxFractionDigits="3" type ="number"/> </td>
+                                    <td><fmt:formatNumber value ="${p.value[1]}" maxFractionDigits="3" type ="number"/> </td>
+                                    <td><fmt:formatNumber value ="${p.value[0]-p.value[1]}" maxFractionDigits="3" type ="number"/> </td>
+
                                 </tr>
                             </tbody>
                         </c:forEach>
@@ -107,15 +113,16 @@
 </div>
 
 <script>
-    let labelThongKe = [], dataThongKe = [];
+    let labelThongKe = [], dataThongKe = [];dataHuyVe =[];
     <c:forEach var="p" items="${doanhThu}" >
-    labelThongKe.push(${p.key});
-    dataThongKe.push(${p.value});
+        labelThongKe.push(${p.key});
+        dataThongKe.push(${p.value[0]})
+        dataHuyVe.push(${p.value[1]});
 
     </c:forEach>
 
     window.onload = function () {
-        thongKeDoanhThu("thongKeDoanhThu", labelThongKe, dataThongKe);
+        thongKeDoanhThu("thongKeDoanhThu", labelThongKe, dataThongKe,dataHuyVe);
         document.getElementById("selectY").value = ${nam}
     }
 </script>

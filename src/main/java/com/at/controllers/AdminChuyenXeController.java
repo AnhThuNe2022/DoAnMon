@@ -80,19 +80,10 @@ public class AdminChuyenXeController {
         model.addAttribute("ListXe", xeService.listXe());
         model.addAttribute("ListTuyenXe", tuyenXeService.getListTuyenXe(null,1).get(1));
 
-        // tính tổng từ 1 tới 100;
-        int tong = 0;
-        for(int i = 1 ; i <= 100 ; i++)
-        {
-            tong += i;
-        }
-        model.addAttribute("ok", tong);
+       
 
         
         return "adminChuyenXe";
-        
-        
-        
         
     }
 

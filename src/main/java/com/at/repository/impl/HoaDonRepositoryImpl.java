@@ -116,6 +116,7 @@ public class HoaDonRepositoryImpl implements HoaDonRepository {
             List<Chitiethoadon> Listcthd = q.getResultList();
 
             for (Chitiethoadon x : Listcthd) {
+                System.out.println("========================"+ x.getMaCT());
                 if (!this.hoaDonChiTietRepository.deleteHDCT(x.getMaCT())) {
                     return false;
                 }

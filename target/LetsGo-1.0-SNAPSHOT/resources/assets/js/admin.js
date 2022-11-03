@@ -230,6 +230,7 @@ function updateCX(id) {
         document.getElementById("maTuyenXe").value = data.maTuyenXe.maTuyenXe;
         document.getElementById("maXe").value = data.maXe.maXe;
         document.getElementById("giaVeNe").value = data.giaVe;
+        document.getElementById("soChoConDu").value = data.soChoConDu;
 
         var d = new Date(data.gioXuatPhat);
         var dt = d.getDate();

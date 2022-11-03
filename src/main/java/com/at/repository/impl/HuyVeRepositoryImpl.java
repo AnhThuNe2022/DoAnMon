@@ -71,7 +71,8 @@ public class HuyVeRepositoryImpl implements HuyVeRepository {
         try {
             Session s = this.sessionFactory.getObject().getCurrentSession();
             Huyve h = s.get(Huyve.class, maHV);
-            s.remove(h);
+            if(h != null)
+                s.remove(h);
             return true;
         } catch (Exception e) {
             e.printStackTrace();

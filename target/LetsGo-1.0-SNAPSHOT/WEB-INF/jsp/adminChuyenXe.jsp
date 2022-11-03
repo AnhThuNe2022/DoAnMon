@@ -20,7 +20,7 @@
         <div class="col" style="margin-top: 10px">
 
             <h3 style="text-align: center" >
-                QUẢN LÝ CHUYẾN XE ${ok}
+                QUẢN LÝ CHUYẾN XE 
             </h3>
             <div class="container mt-4">
                 <button  type="button" onclick="alertform('form-insert',1);closebt('form-is');setValueDateTime('GioXuatPhat');setValueDateTime('GioDen');" style="background-color: #35322d" class="btn btn-primary"><span class='bi bi-person-plus'></span></button>
@@ -36,7 +36,7 @@
                             <th>Tài Xế Chính</th>
                             <th>Tài Xế Phụ</th>
                             <th>Giá Vé</th>
-                            <th>TT</th>
+                            <th>Số chỗ</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -51,16 +51,7 @@
                                 <td>${p.maTaiXeChinh.tenTaiXe}</td>
                                 <td>${p.maTaiXePhu.tenTaiXe}</td>
                                 <td>${p.giaVe}</td>
-                                <td><c:if test="${p.trangThai.toString() == '0'}">
-                                        Chưa Xuất Phát
-                                    </c:if>
-                                    <c:if test="${p.trangThai.toString() == '1'}">
-                                        Đang Xuất Phát
-                                    </c:if>
-                                    <c:if test="${p.trangThai}.toString() == '3'}">
-                                        Đã Xong
-                                    </c:if>
-                                </td>
+                                <td>${p.soChoConDu}</td>
                                 <td>
                                     <div class="spinner-border text-warning"  id="loading${p.maChuyenXe}" style = "display:none"></div>
                                     <c:url value ="/api/admin/chuyenxe/delete/${p.maChuyenXe}" var="del" /> 
@@ -235,8 +226,12 @@
 
                                         <div class="textbox-admin">
                                             <i class="bi bi-truck-front"></i>
-                                            <form:input path="giaVe" id="giaVeNe" type="number" placeholder="Giá Vé" />
+                                            <form:input path="giaVe" id="giaVeNe" type="number" style ="width: 50%; float: left" placeholder="Giá Vé" />
+                                            <form:input path="soChoConDu" id="soChoConDu" style ="width: 50%; float: right" readonly="true" type="number" />
+
                                         </div>
+                                        
+                                         
 
 
                                         <div class="textbox-admin">

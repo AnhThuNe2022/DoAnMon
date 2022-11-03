@@ -38,15 +38,18 @@ public class HoaDonChiTietRepositoryImpl implements HoaDonChiTietRepository{
     public boolean deleteHDCT(int maCT) {
         Session s = this.sessionFactory.getObject().getCurrentSession();
         try {
-            Chitiethoadon ct = s.get(Chitiethoadon.class, maCT);
-
+             Chitiethoadon ct = s.get(Chitiethoadon.class, maCT);
+            
+            if(ct != null){
             if(!ct.getTrangThai())
             {
                 huyVeRepository.deleteHuyVe(maCT);
 
             }
             s.remove(ct);
+            }
             return true;
+
         } catch (Exception e) {
             e.printStackTrace();
             return false;

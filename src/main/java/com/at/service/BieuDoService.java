@@ -15,7 +15,7 @@ import java.util.Map;
  */
 public interface BieuDoService {
     List<Object[]> matDoChuyenXe();
-    Map<Integer,BigDecimal> thongKeDoanhThu(int tk,int y);
+    Map<Integer,List<BigDecimal>> thongKeDoanhThu(int tk,int y);
 
 
 }

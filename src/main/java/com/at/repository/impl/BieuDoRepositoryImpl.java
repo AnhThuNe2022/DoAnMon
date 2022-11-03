@@ -87,7 +87,7 @@ public class BieuDoRepositoryImpl implements BieuDoRepository {
             } else if (tk == 2) {
                 get = b.function("YEAR", Integer.class, hoaDon.get("ngayDatVe"));
             }
-        q.multiselect(get, b.diff(b.sum(rootCthd.get("gia")), b.sum(huyVe.get("soTienHoan"))));
+        q.multiselect(get, b.sum(rootCthd.get("gia")), b.sum(huyVe.get("soTienHoan")));
         if(tk != 2){
             Predicate p = b.equal(b.function("YEAR", Integer.class, hoaDon.get("ngayDatVe")),year);
             q.where(p);
